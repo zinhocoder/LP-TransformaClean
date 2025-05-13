@@ -45,6 +45,7 @@ const services = [
     afterImage:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/depois4.jpg-W4k0byNFzQDOEJu0Y223oxvTd2jLt3.jpeg",
     featured: true,
+    hasVideo: true,
   },
   {
     id: 2,
@@ -52,9 +53,9 @@ const services = [
     description: "Higienização completa que devolve beleza e conforto às suas poltronas.",
     category: "estofados",
     beforeImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/antes2.jpg-2Wivg3f4qkVR3ahBeYBPUnzZlWgDK8.jpeg",
+      "/poltronaantes.jpg",
     afterImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/depois2.jpg-zilPxgMe6rM4iGflCfLc6Qm8g6N6D5.jpeg",
+      "/poltronadepois.jpg",
   },
   {
     id: 3,
@@ -62,9 +63,9 @@ const services = [
     description: "Tratamento especializado para pufs, removendo manchas e revitalizando o tecido.",
     category: "estofados",
     beforeImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/antes3.jpg-kuO4KaWOax5C3F4Trcy8X5CzMveulq.jpeg",
+      "/pufs.png",
     afterImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/depois3.jpg-wngpkcfPo53QvZ2fH5vuRGA6okDwEn.jpeg",
+      "/pufs.png",
   },
   {
     id: 4,
@@ -93,9 +94,9 @@ const services = [
     description: "Eliminação de ácaros e alérgenos de travesseiros para um sono mais saudável.",
     category: "colchoes",
     beforeImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/antes3.jpg-kuO4KaWOax5C3F4Trcy8X5CzMveulq.jpeg",
+      "travesseiro.png",
     afterImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/depois3.jpg-wngpkcfPo53QvZ2fH5vuRGA6okDwEn.jpeg",
+      "travesseiro.png",
   },
   {
     id: 7,
@@ -103,9 +104,9 @@ const services = [
     description: "Limpeza profunda de cabeceiras de cama, removendo poeira e ácaros acumulados.",
     category: "colchoes",
     beforeImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/antes4.jpg-oBbMTH2qlgdAVwfujHbKxVhTrxjgmg.jpeg",
+      "/cabeceira.png",
     afterImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/depois4.jpg-W4k0byNFzQDOEJu0Y223oxvTd2jLt3.jpeg",
+      "/cabeceira.png",
   },
   {
     id: 8,
@@ -113,9 +114,9 @@ const services = [
     description: "Limpeza especializada para bancos e estofados de veículos, eliminando odores e manchas.",
     category: "veiculos",
     beforeImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/antes5.jpg-OJAEU8JdeOMOgZmpUcSSai5jlDOYd1.jpeg",
+      "/automativa.jpg",
     afterImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/depois5.jpg-ba5vMsF3cYGbvpOm2hDvd3Mx46MrNy.jpeg",
+      "/automativa2.jpg",
     featured: true,
   },
   {
@@ -124,9 +125,9 @@ const services = [
     description: "Tratamento específico para estofados de barcos e embarcações, resistente à umidade.",
     category: "veiculos",
     beforeImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/antes2.jpg-2Wivg3f4qkVR3ahBeYBPUnzZlWgDK8.jpeg",
+      "/embaracacoes.png",
     afterImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/depois2.jpg-zilPxgMe6rM4iGflCfLc6Qm8g6N6D5.jpeg",
+      "/embaracacoes.png",
   },
   {
     id: 10,
@@ -134,9 +135,9 @@ const services = [
     description: "Limpeza especializada para interiores de aeronaves, seguindo padrões de segurança.",
     category: "veiculos",
     beforeImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/antes3.jpg-kuO4KaWOax5C3F4Trcy8X5CzMveulq.jpeg",
+      "/aviacoes.png",
     afterImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/depois3.jpg-wngpkcfPo53QvZ2fH5vuRGA6okDwEn.jpeg",
+      "/aviacoes.png",
   },
   {
     id: 11,
@@ -144,9 +145,9 @@ const services = [
     description: "Tratamento especial para estofados de couro, limpando e hidratando para maior durabilidade.",
     category: "especiais",
     beforeImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/antes.jpg-GdH7xkO7i1Bc5y3DQkFqtuD8wdt4rX.jpeg",
+      "/couroautomativo.png",
     afterImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/depois.jpg-dF01UOUpLyQdqsYikjG7spoAsAEFNk.jpeg",
+      "/couroautomativo.png",
     featured: true,
   },
   {
@@ -155,9 +156,9 @@ const services = [
     description: "Higienização segura e eficaz para carrinhos de bebê, eliminando germes e sujeira.",
     category: "especiais",
     beforeImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/antes4.jpg-oBbMTH2qlgdAVwfujHbKxVhTrxjgmg.jpeg",
+      "/bebes.png",
     afterImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/depois4.jpg-W4k0byNFzQDOEJu0Y223oxvTd2jLt3.jpeg",
+      "/bebes.png",
   },
   {
     id: 13,
@@ -165,9 +166,20 @@ const services = [
     description: "Limpeza completa de ambientes residenciais e comerciais por profissionais treinados.",
     category: "especiais",
     beforeImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/antes5.jpg-OJAEU8JdeOMOgZmpUcSSai5jlDOYd1.jpeg",
+      "/diarista1.png",
     afterImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/depois5.jpg-ba5vMsF3cYGbvpOm2hDvd3Mx46MrNy.jpeg",
+      "/diarista2.png",
+  },
+  {
+    id: 14,
+    name: "Impermeabilização de estofados",
+    description: "Proteção avançada que previne manchas e prolonga a vida útil dos seus estofados e tecidos.",
+    category: "especiais",
+    beforeImage:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/antes2.jpg-2Wivg3f4qkVR3ahBeYBPUnzZlWgDK8.jpeg",
+    afterImage:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/depois2.jpg-zilPxgMe6rM4iGflCfLc6Qm8g6N6D5.jpeg",
+    featured: true,
   },
 ]
 
@@ -177,9 +189,13 @@ export default function ServicesGrid() {
   const [isComparing, setIsComparing] = useState(false)
   const [sliderPosition, setSliderPosition] = useState(50)
   const sliderRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
+  // Garantir que apenas os serviços da categoria selecionada sejam exibidos
   const filteredServices = services.filter((service) => service.category === activeCategory)
-  const featuredServices = services.filter((service) => service.featured)
+
+  // Serviços em destaque - apenas da categoria atual
+  const featuredServices = services.filter((service) => service.featured && service.category === activeCategory)
 
   const handleCategoryChange = (categoryId: string) => {
     setActiveCategory(categoryId)
@@ -249,33 +265,38 @@ export default function ServicesGrid() {
         ))}
       </div>
 
-      {/* Serviços em destaque */}
-      {!selectedService && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-10">
-          {featuredServices.map((service) => (
-            <div
-              key={service.id}
-              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group"
-              onClick={() => handleServiceClick(service.id)}
-            >
-              <div className="relative h-40 md:h-48">
-                <Image
-                  src={service.afterImage || "/placeholder.svg"}
-                  alt={service.name}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                  <div className="p-4 text-white">
-                    <h3 className="font-bold text-base md:text-lg">{service.name}</h3>
-                    <p className="text-xs md:text-sm text-white/80 line-clamp-1">{service.description}</p>
-                  </div>
-                </div>
-              </div>
+      {/* Todos os serviços da categoria atual */}
+{!selectedService && (
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-10">
+    {filteredServices.map((service) => (
+      <div
+        key={service.id}
+        className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group"
+        onClick={() => handleServiceClick(service.id)}
+      >
+        <div className="relative h-40 md:h-48">
+          <Image
+            src={service.afterImage || "/placeholder.svg"}
+            alt={service.name}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+            <div className="p-4 text-white">
+              <h3 className="font-bold text-base md:text-lg">{service.name}</h3>
+              <p className="text-xs md:text-sm text-white/80 line-clamp-1">{service.description}</p>
             </div>
-          ))}
+          </div>
+          {service.hasVideo && (
+            <div className="absolute top-2 right-2 bg-[#5fb5a0] text-white px-2 py-1 rounded-full text-xs">
+              Vídeo
+            </div>
+          )}
         </div>
-      )}
+      </div>
+    ))}
+  </div>
+)}
 
       {/* Visualização detalhada do serviço */}
       {selectedService && selectedServiceData && (
@@ -301,6 +322,24 @@ export default function ServicesGrid() {
             </div>
 
             <p className="text-sm md:text-base text-[#4a4a4a] mb-6">{selectedServiceData.description}</p>
+
+            {/* Vídeo de demonstração para o serviço de higienização de sofá */}
+            {selectedServiceData.id === 1 && selectedServiceData.hasVideo && (
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold mb-3">Veja como funciona:</h4>
+                <div className="relative rounded-xl overflow-hidden aspect-video">
+                  <video
+                    ref={videoRef}
+                    className="w-full h-full object-cover"
+                    controls
+                    poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/depois4.jpg-W4k0byNFzQDOEJu0Y223oxvTd2jLt3.jpeg"
+                  >
+                    <source src="/videos/higienizacao-sofa.mp4" type="video/mp4" />
+                    Seu navegador não suporta vídeos HTML5.
+                  </video>
+                </div>
+              </div>
+            )}
 
             {isComparing ? (
               <div
@@ -408,7 +447,12 @@ export default function ServicesGrid() {
                   <Check className="h-3 w-3 md:h-4 md:w-4 text-[#5fb5a0]" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-sm md:text-base text-[#2d2d2d] mb-1">{service.name}</h3>
+                  <div className="flex items-center gap-2">
+                    <h3 className="font-semibold text-sm md:text-base text-[#2d2d2d] mb-1">{service.name}</h3>
+                    {service.hasVideo && (
+                      <span className="bg-[#5fb5a0]/20 text-[#5fb5a0] text-xs px-2 py-0.5 rounded-full">Vídeo</span>
+                    )}
+                  </div>
                   <p className="text-xs md:text-sm text-[#4a4a4a] line-clamp-2">{service.description}</p>
                 </div>
               </div>

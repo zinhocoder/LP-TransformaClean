@@ -13,12 +13,77 @@ import {
   Car,
   SailboatIcon as Boat,
   Brush,
-  HomeIcon,
+  Droplets,
+  Play,
+  Volume2,
+  VolumeX,
 } from "lucide-react"
+import { useRef, useEffect, useState } from "react"
 import ServiceCarousel from "@/components/service-carousel"
 import ServicesGrid from "@/components/services-grid"
 
 export default function Home() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [isMuted, setIsMuted] = useState(true)
+
+  useEffect(() => {
+    // Função para verificar se o elemento está visível na viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // Se o vídeo estiver visível na tela
+          if (entry.isIntersecting && videoRef.current) {
+            videoRef.current
+              .play()
+              .then(() => {
+                setIsPlaying(true)
+              })
+              .catch((e) => {
+                console.log("Autoplay foi bloqueado pelo navegador:", e)
+              })
+          } else if (videoRef.current) {
+            videoRef.current.pause()
+            setIsPlaying(false)
+          }
+        })
+      },
+      { threshold: 0.3 }, // O elemento precisa estar pelo menos 30% visível
+    )
+
+    // Observar o vídeo
+    if (videoRef.current) {
+      observer.observe(videoRef.current)
+    }
+
+    // Limpar o observer quando o componente for desmontado
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current)
+      }
+    }
+  }, [])
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (videoRef.current.paused) {
+        videoRef.current.play().then(() => {
+          setIsPlaying(true)
+        })
+      } else {
+        videoRef.current.pause()
+        setIsPlaying(false)
+      }
+    }
+  }
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted
+      setIsMuted(!isMuted)
+    }
+  }
+
   return (
     <div className="flex flex-col min-h-screen bg-[#f8f7f4]">
       {/* Hero Section */}
@@ -30,7 +95,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center">
             <div className="flex flex-col text-left">
               <div className="mb-6">
-                <Image src="/logo.png" alt="Transforma Clean" width={250} height={80} className="h-auto" />
+                <Image src="/logo.png" alt="Transforma Clean" width={220} height={80} className="h-auto" />
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#2d2d2d] max-w-4xl mb-6">
                 Transforme Seu Lar, <span className="text-[#5fb5a0]">Transforme Sua Vida</span>
@@ -273,13 +338,13 @@ export default function Home() {
             <div className="bg-[#f8f7f4] rounded-2xl p-8 shadow-lg overflow-hidden flex flex-col">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 rounded-2xl bg-[#5fb5a0]/10 flex items-center justify-center flex-shrink-0">
-                  <HomeIcon className="h-8 w-8 text-[#5fb5a0]" />
+                  <Droplets className="h-8 w-8 text-[#5fb5a0]" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-[#2d2d2d] mb-3">Serviço de Diaristas</h3>
+                  <h3 className="text-xl font-bold text-[#2d2d2d] mb-3">Impermeabilização de Estofados</h3>
                   <p className="text-[#4a4a4a] mb-4 min-h-[80px]">
-                    Equipe altamente treinada para limpeza completa de residências e ambientes comerciais, com foco na
-                    qualidade, segurança e atenção aos detalhes.
+                    Proteção avançada que previne manchas e prolonga a vida útil dos seus estofados e tecidos, criando
+                    uma barreira invisível contra líquidos e sujeira.
                   </p>
                 </div>
               </div>
@@ -288,7 +353,7 @@ export default function Home() {
                   className="bg-[#5fb5a0] hover:bg-[#4a9a87] text-white rounded-full h-10 px-6 w-full sm:w-1/2 md:w-auto mx-auto md:mx-0"
                   onClick={() =>
                     window.open(
-                      "https://wa.me/5548991501393?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20serviço%20de%20diaristas.",
+                      "https://wa.me/5548991501393?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20serviço%20de%20impermeabilização%20de%20estofados.",
                       "_blank",
                     )
                   }
@@ -358,108 +423,185 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Transformação Section */}
-      <section className="py-20 bg-gradient-to-b from-[#f8f7f4] to-white relative overflow-hidden">
-        {/* Blue accent effect */}
-        <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-[#7ab8d6]/10 to-transparent"></div>
-        <div className="absolute bottom-0 right-0 w-1/4 h-full bg-gradient-to-l from-[#7ab8d6]/15 to-transparent"></div>
+      {/* Transformação Section - VSL Redesenhada */}
+      <section className="py-0 bg-[#2d2d2d] relative overflow-hidden">
+        {/* Efeito de gradiente para dar profundidade */}
+        <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-[#5fb5a0]/20 to-transparent z-0"></div>
+        <div className="absolute bottom-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#5fb5a0]/10 to-transparent z-0"></div>
 
-        <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="flex flex-col items-center text-center mb-16">
-            <div className="inline-flex items-center justify-center p-2 bg-[#5fb5a0]/10 rounded-full mb-4">
-              <Sparkles className="h-6 w-6 text-[#5fb5a0]" />
+        {/* Cabeçalho da VSL */}
+        <div className="bg-gradient-to-r from-[#5fb5a0] to-[#4a9a87] py-8 md:py-10 relative z-10">
+          <div className="container max-w-6xl mx-auto px-4 sm:px-6">
+            <div className="flex flex-col items-center text-center">
+              <div className="inline-flex items-center justify-center p-2 bg-white/20 rounded-full mb-4">
+                <Sparkles className="h-6 w-6 text-white" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-2">
+                REVELADO: O Segredo da Higienização Profissional
+              </h2>
+              <p className="text-xl text-white/90 max-w-3xl font-medium">
+                Assista ao vídeo abaixo e descubra como transformamos ambientes sujos em espaços impecáveis em minutos
+              </p>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#2d2d2d] mb-4">Transformações Reais</h2>
-            <p className="text-lg text-[#4a4a4a] max-w-3xl">
-              Veja o poder da nossa limpeza profissional e como podemos transformar completamente seus estofados e
-              colchões.
-            </p>
+          </div>
+        </div>
+
+        {/* Conteúdo principal da VSL */}
+        <div className="container max-w-5xl mx-auto px-4 sm:px-6 relative z-10 -mt-6">
+          {/* Player de vídeo com controles personalizados */}
+          <div className="bg-black rounded-xl overflow-hidden shadow-[0_0_30px_rgba(95,181,160,0.3)] mb-10">
+            <div className="relative">
+              {/* Vídeo */}
+              <div className="aspect-video">
+                <video
+                  ref={videoRef}
+                  className="w-full h-full object-cover"
+                  loop
+                  playsInline
+                  poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/depois4.jpg-W4k0byNFzQDOEJu0Y223oxvTd2jLt3.jpeg"
+                >
+                  <source src="/higienizacao.mp4" type="video/mp4" />
+                  Seu navegador não suporta vídeos HTML5.
+                </video>
+              </div>
+
+              {/* Overlay com controles personalizados */}
+              <div
+                className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-between transition-opacity duration-300 ${isPlaying ? "opacity-0 hover:opacity-100" : "opacity-100"}`}
+              >
+                {/* Título do vídeo no topo */}
+                <div className="p-4 md:p-6">
+                  <h3 className="text-lg md:text-xl font-bold text-white drop-shadow-lg">
+                    Transformação Completa de Sofá em Apenas 1 Hora
+                  </h3>
+                </div>
+
+                {/* Botão de play centralizado */}
+                {!isPlaying && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <button
+                      onClick={togglePlay}
+                      className="w-20 h-20 bg-[#5fb5a0] rounded-full flex items-center justify-center transition-transform hover:scale-110 hover:bg-[#4a9a87]"
+                    >
+                      <Play className="h-10 w-10 text-white fill-white" />
+                    </button>
+                  </div>
+                )}
+
+                {/* Controles na parte inferior */}
+                <div className="p-4 md:p-6 flex justify-between items-center">
+                  <button
+                    onClick={togglePlay}
+                    className="bg-white/20 backdrop-blur-sm rounded-full p-2 hover:bg-white/30 transition-colors"
+                  >
+                    {isPlaying ? (
+                      <div className="w-4 h-4 border-l-2 border-r-2 border-white"></div>
+                    ) : (
+                      <Play className="h-4 w-4 text-white fill-white" />
+                    )}
+                  </button>
+
+                  <button
+                    onClick={toggleMute}
+                    className="bg-white/20 backdrop-blur-sm rounded-full p-2 hover:bg-white/30 transition-colors"
+                  >
+                    {isMuted ? <VolumeX className="h-4 w-4 text-white" /> : <Volume2 className="h-4 w-4 text-white" />}
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className="grid grid-cols-2">
-                  <div className="relative h-[250px]">
-                    <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-medium z-10">
-                      Antes
-                    </div>
-                    <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/antes.jpg-GdH7xkO7i1Bc5y3DQkFqtuD8wdt4rX.jpeg"
-                      alt="Colchão antes da limpeza"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="relative h-[250px]">
-                    <div className="absolute top-4 left-4 bg-[#5fb5a0] text-white px-3 py-1 rounded-full text-xs font-medium z-10">
-                      Depois
-                    </div>
-                    <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/depois.jpg-dF01UOUpLyQdqsYikjG7spoAsAEFNk.jpeg"
-                      alt="Colchão depois da limpeza"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#2d2d2d] mb-2">Higienização de Colchão</h3>
-                  <p className="text-[#4a4a4a]">
-                    Remoção de manchas, eliminação de ácaros e purificação completa para noites de sono mais saudáveis.
-                  </p>
-                </div>
-              </div>
-            </div>
+          {/* Conteúdo de texto da VSL */}
+          <div className="bg-white rounded-xl p-8 md:p-10 shadow-xl mb-16">
+            <div className="max-w-3xl mx-auto">
+              {/* Headline principal */}
+              <h3 className="text-2xl md:text-3xl font-bold text-[#2d2d2d] mb-6 text-center">
+                <span className="text-[#5fb5a0]">ALERTA:</span> Seu sofá pode conter até 10x mais bactérias que um
+                assento sanitário!
+              </h3>
 
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-[#2d2d2d]">O Poder da Transformação 💪</h3>
-              <p className="text-[#4a4a4a] text-lg">
-                Quando fundamos a Transforma Clean, não imaginávamos que estaríamos criando algo muito maior do que uma
-                simples empresa de higienização. Nossa missão é devolver o conforto, a saúde e o orgulho do seu lar.
+              {/* Subheadline */}
+              <p className="text-xl text-[#4a4a4a] font-medium mb-8 text-center">
+                Descubra como nossa tecnologia exclusiva elimina 99,9% dos germes, ácaros e manchas que colocam sua
+                família em risco todos os dias
               </p>
 
-              <div className="space-y-4 mt-6">
-                <div className="flex items-start gap-3">
-                  <div className="mt-1 bg-[#5fb5a0]/10 p-1 rounded-full">
-                    <Check className="h-5 w-5 text-[#5fb5a0]" />
+              {/* Benefícios em formato de lista */}
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3 bg-[#f8f7f4] p-4 rounded-lg">
+                  <div className="mt-1 bg-[#5fb5a0] p-1 rounded-full flex-shrink-0">
+                    <Check className="h-4 w-4 text-white" />
                   </div>
-                  <p className="text-[#4a4a4a]">
-                    <span className="font-semibold">Tecnologia avançada</span> que remove até as manchas mais difíceis
+                  <p className="text-[#4a4a4a] font-medium">
+                    <span className="font-bold text-[#2d2d2d]">Tecnologia de extração profunda</span> que remove manchas
+                    que outros produtos não conseguem
                   </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="mt-1 bg-[#5fb5a0]/10 p-1 rounded-full">
-                    <Check className="h-5 w-5 text-[#5fb5a0]" />
+                <div className="flex items-start gap-3 bg-[#f8f7f4] p-4 rounded-lg">
+                  <div className="mt-1 bg-[#5fb5a0] p-1 rounded-full flex-shrink-0">
+                    <Check className="h-4 w-4 text-white" />
                   </div>
-                  <p className="text-[#4a4a4a]">
-                    <span className="font-semibold">Produtos especializados</span> que não agridem os tecidos ou o meio
-                    ambiente
+                  <p className="text-[#4a4a4a] font-medium">
+                    <span className="font-bold text-[#2d2d2d]">Eliminação de 99,9% dos ácaros e bactérias</span> que
+                    causam alergias e problemas respiratórios
                   </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="mt-1 bg-[#5fb5a0]/10 p-1 rounded-full">
-                    <Check className="h-5 w-5 text-[#5fb5a0]" />
+                <div className="flex items-start gap-3 bg-[#f8f7f4] p-4 rounded-lg">
+                  <div className="mt-1 bg-[#5fb5a0] p-1 rounded-full flex-shrink-0">
+                    <Check className="h-4 w-4 text-white" />
                   </div>
-                  <p className="text-[#4a4a4a]">
-                    <span className="font-semibold">Profissionais treinados</span> para oferecer o melhor serviço do
-                    mercado
+                  <p className="text-[#4a4a4a] font-medium">
+                    <span className="font-bold text-[#2d2d2d]">Secagem rápida</span> - seu estofado estará pronto para
+                    uso em poucas horas
                   </p>
                 </div>
               </div>
 
-              <Button
-                className="bg-[#5fb5a0] hover:bg-[#4a9a87] text-white rounded-full h-12 px-8 mt-4"
-                onClick={() =>
-                  window.open(
-                    "https://wa.me/5548991501393?text=Olá!%20Gostaria%20de%20ver%20mais%20transformações%20da%20Transforma%20Clean.",
-                    "_blank",
-                  )
-                }
-              >
-                Ver Mais Transformações
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              {/* Depoimento destacado */}
+              <div className="bg-[#5fb5a0]/10 p-6 rounded-xl mb-8 border-l-4 border-[#5fb5a0]">
+                <p className="text-[#4a4a4a] italic mb-4">
+                  "Meu sofá tinha manchas de café que eu tentei remover por meses sem sucesso. A Transforma Clean
+                  conseguiu eliminar completamente em apenas uma sessão. Parece novo!"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#5fb5a0]/20 flex items-center justify-center">
+                    <span className="text-[#5fb5a0] font-bold">MR</span>
+                  </div>
+                  <div>
+                    <p className="font-medium text-[#2d2d2d]">Mariana Ribeiro</p>
+                    <div className="flex">
+                      <Star className="h-4 w-4 fill-[#5fb5a0] text-[#5fb5a0]" />
+                      <Star className="h-4 w-4 fill-[#5fb5a0] text-[#5fb5a0]" />
+                      <Star className="h-4 w-4 fill-[#5fb5a0] text-[#5fb5a0]" />
+                      <Star className="h-4 w-4 fill-[#5fb5a0] text-[#5fb5a0]" />
+                      <Star className="h-4 w-4 fill-[#5fb5a0] text-[#5fb5a0]" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA final */}
+              <div className="text-center">
+                <p className="text-xl font-bold text-[#2d2d2d] mb-6">
+                  Não espere mais para transformar seu lar em um ambiente verdadeiramente limpo e saudável!
+                </p>
+
+                <Button
+                  className="bg-[#5fb5a0] hover:bg-[#4a9a87] text-white rounded-full h-16 px-10 text-xl font-bold w-full md:w-auto min-w-[300px] shadow-lg"
+                  onClick={() =>
+                    window.open(
+                      "https://wa.me/5548991501393?text=Olá!%20Vi%20o%20vídeo%20de%20transformação%20e%20gostaria%20de%20agendar%20uma%20higienização%20profissional.",
+                      "_blank",
+                    )
+                  }
+                >
+                  QUERO TRANSFORMAR MEU LAR AGORA!
+                  <ArrowRight className="ml-2 h-6 w-6" />
+                </Button>
+
+                <p className="text-sm text-[#4a4a4a] mt-4">Atendemos em toda a região. Orçamento sem compromisso.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -613,7 +755,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="font-medium text-[#2d2d2d]">Ana Claudia</p>
-                  <p className="text-sm text-[#4a4a4a]">São Paulo, SP</p>
+                  <p className="text-sm text-[#4a4a4a]">Florianópolis, SC</p>
                 </div>
               </div>
             </div>
@@ -636,7 +778,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="font-medium text-[#2d2d2d]">Mariana Ribeiro</p>
-                  <p className="text-sm text-[#4a4a4a]">Rio de Janeiro, RJ</p>
+                  <p className="text-sm text-[#4a4a4a]">Florianópolis, SC</p>
                 </div>
               </div>
             </div>
@@ -659,7 +801,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="font-medium text-[#2d2d2d]">Pedro Lima</p>
-                  <p className="text-sm text-[#4a4a4a]">Belo Horizonte, MG</p>
+                  <p className="text-sm text-[#4a4a4a]">Florianópolis, SC</p>
                 </div>
               </div>
             </div>
