@@ -135,7 +135,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-sm text-[#4a4a4a]">
-                  <span className="font-bold">+500 clientes</span> satisfeitos este mês
+                  <span className="font-bold">+100 clientes</span> satisfeitos este mês
                 </div>
               </div>
             </div>
@@ -558,28 +558,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Depoimento destacado */}
-              <div className="bg-[#5fb5a0]/10 p-6 rounded-xl mb-8 border-l-4 border-[#5fb5a0]">
-                <p className="text-[#4a4a4a] italic mb-4">
-                  "Meu sofá tinha manchas de café que eu tentei remover por meses sem sucesso. A Transforma Clean
-                  conseguiu eliminar completamente em apenas uma sessão. Parece novo!"
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#5fb5a0]/20 flex items-center justify-center">
-                    <span className="text-[#5fb5a0] font-bold">MR</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-[#2d2d2d]">Mariana Ribeiro</p>
-                    <div className="flex">
-                      <Star className="h-4 w-4 fill-[#5fb5a0] text-[#5fb5a0]" />
-                      <Star className="h-4 w-4 fill-[#5fb5a0] text-[#5fb5a0]" />
-                      <Star className="h-4 w-4 fill-[#5fb5a0] text-[#5fb5a0]" />
-                      <Star className="h-4 w-4 fill-[#5fb5a0] text-[#5fb5a0]" />
-                      <Star className="h-4 w-4 fill-[#5fb5a0] text-[#5fb5a0]" />
-                    </div>
-                  </div>
-                </div>
-              </div>
 
               {/* CTA final */}
 <div className="text-center px-4 md:px-0">
@@ -623,7 +601,7 @@ export default function Home() {
                 <Sparkles className="h-6 w-6 text-[#5fb5a0]" />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                Manifesto Ideológico <span className="text-[#5fb5a0]">Transforma Clean</span>
+                Transforma <span className="text-[#5fb5a0]">Clean</span>
               </h2>
               <p className="text-lg text-white/80">
                 Acreditamos que a limpeza vai muito além da estética. Cada sofá, cada colchão e cada ambiente são

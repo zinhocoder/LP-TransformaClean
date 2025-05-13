@@ -50,9 +50,27 @@ const services = [
     title: "Limpeza de poltronas",
     description: "Tratamento especializado para poltronas, removendo manchas e restaurando o conforto.",
     beforeImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/antes2.jpg-2Wivg3f4qkVR3ahBeYBPUnzZlWgDK8.jpeg",
+      "poltronaantes.jpg",
     afterImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/depois2.jpg-zilPxgMe6rM4iGflCfLc6Qm8g6N6D5.jpeg",
+      "poltronadepois.jpg",
+  },
+  {
+    id: 6,
+    title: "Limpeza de colchão",
+    description: "Higienização que elimina ácaros, suor e manchas para noites de sono mais saudáveis.",
+    beforeImage:
+      "colchao2antes.jpg",
+    afterImage:
+      "colchao2depois.jpg",
+  },
+  {
+    id: 7,
+    title: "Limpeza de cadeiras",
+    description: "Restauração da aparência e higiene de cadeiras de escritório, jantar e outros ambientes.",
+    beforeImage:
+      "cadeira2antes.jpg",
+    afterImage:
+      "cadeira2depois.jpg",
   },
 ]
 
