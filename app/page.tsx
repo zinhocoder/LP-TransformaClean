@@ -582,26 +582,29 @@ export default function Home() {
               </div>
 
               {/* CTA final */}
-              <div className="text-center">
-                <p className="text-xl font-bold text-[#2d2d2d] mb-6">
-                  Não espere mais para transformar seu lar em um ambiente verdadeiramente limpo e saudável!
-                </p>
+<div className="text-center px-4 md:px-0">
+  <p className="text-xl font-bold text-[#2d2d2d] mb-6">
+    Não espere mais para transformar seu lar em um ambiente verdadeiramente limpo e saudável!
+  </p>
 
-                <Button
-                  className="bg-[#5fb5a0] hover:bg-[#4a9a87] text-white rounded-full h-16 px-10 text-xl font-bold w-full md:w-auto min-w-[300px] shadow-lg"
-                  onClick={() =>
-                    window.open(
-                      "https://wa.me/5548991501393?text=Olá!%20Vi%20o%20vídeo%20de%20transformação%20e%20gostaria%20de%20agendar%20uma%20higienização%20profissional.",
-                      "_blank",
-                    )
-                  }
-                >
-                  QUERO TRANSFORMAR MEU LAR AGORA!
-                  <ArrowRight className="ml-2 h-6 w-6" />
-                </Button>
+  <Button
+    className="bg-[#5fb5a0] hover:bg-[#4a9a87] text-white rounded-full h-16 px-6 md:px-10 text-base md:text-xl font-bold w-full md:w-auto md:min-w-[300px] max-w-full shadow-lg whitespace-normal leading-tight"
+    onClick={() =>
+      window.open(
+        "https://wa.me/5548991501393?text=Olá!%20Vi%20o%20vídeo%20de%20transformação%20e%20gostaria%20de%20agendar%20uma%20higienização%20profissional.",
+        "_blank",
+      )
+    }
+  >
+    QUERO TRANSFORMAR MEU LAR AGORA!
+    <ArrowRight className="ml-2 h-6 w-6" />
+  </Button>
 
-                <p className="text-sm text-[#4a4a4a] mt-4">Atendemos em toda a região. Orçamento sem compromisso.</p>
-              </div>
+  <p className="text-sm text-[#4a4a4a] mt-4">
+    Atendemos em toda a região. Orçamento sem compromisso.
+  </p>
+</div>
+
             </div>
           </div>
         </div>
