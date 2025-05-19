@@ -418,7 +418,7 @@ export default function ServicesGrid() {
                 className="bg-[#5fb5a0] hover:bg-[#4a9a87] text-white rounded-full"
                 onClick={() =>
                   window.open(
-                    `https://wa.me/5548991501393?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20serviço%20de%20${encodeURIComponent(
+                    `https://wa.me/5548991501393?text=Olá!%20Vim%20do%20site,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20de%20${encodeURIComponent(
                       selectedServiceData.name,
                     )}.`,
                     "_blank",

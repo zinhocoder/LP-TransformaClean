@@ -109,7 +109,7 @@ export default function Home() {
                   className="bg-[#5fb5a0] hover:bg-[#4a9a87] text-white rounded-full h-14 px-8 text-lg font-medium w-full"
                   onClick={() =>
                     window.open(
-                      "https://wa.me/5548991501393?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Transforma%20Clean.",
+                      "https://wa.me/5548991501393?text=Olá!%20Vim%20do%20site,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Transforma%20Clean.",
                       "_blank",
                     )
                   }
@@ -181,7 +181,7 @@ export default function Home() {
               className="bg-[#5fb5a0] hover:bg-[#4a9a87] text-white rounded-full h-12 px-8"
               onClick={() =>
                 window.open(
-                  "https://wa.me/5548991501393?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Transforma%20Clean.",
+                  "https://wa.me/5548991501393?text=Olá!%20Vim%20do%20site,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Transforma%20Clean.",
                   "_blank",
                 )
               }
@@ -220,7 +220,7 @@ export default function Home() {
               className="bg-[#5fb5a0] hover:bg-[#4a9a87] text-white rounded-full h-12 px-8"
               onClick={() =>
                 window.open(
-                  "https://wa.me/5548991501393?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20completos%20da%20Transforma%20Clean.",
+                  "https://wa.me/5548991501393?text=Olá!%20Vim%20do%20site,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Transforma%20Clean.",
                   "_blank",
                 )
               }
@@ -269,7 +269,7 @@ export default function Home() {
                   className="bg-[#5fb5a0] hover:bg-[#4a9a87] text-white rounded-full h-10 px-6 w-full sm:w-1/2 md:w-auto mx-auto md:mx-0"
                   onClick={() =>
                     window.open(
-                      "https://wa.me/5548991501393?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20serviço%20de%20higienização%20automotiva.",
+                      "https://wa.me/5548991501393?text=Olá!%20Vim%20do%20site,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Transforma%20Clean.",
                       "_blank",
                     )
                   }
@@ -297,7 +297,7 @@ export default function Home() {
                   className="bg-[#5fb5a0] hover:bg-[#4a9a87] text-white rounded-full h-10 px-6 w-full sm:w-1/2 md:w-auto mx-auto md:mx-0"
                   onClick={() =>
                     window.open(
-                      "https://wa.me/5548991501393?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20serviço%20de%20higienização%20de%20embarcações%20e%20aviação.",
+                      "https://wa.me/5548991501393?text=Olá!%20Vim%20do%20site,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Transforma%20Clean.",
                       "_blank",
                     )
                   }
@@ -325,7 +325,7 @@ export default function Home() {
                   className="bg-[#5fb5a0] hover:bg-[#4a9a87] text-white rounded-full h-10 px-6 w-full sm:w-1/2 md:w-auto mx-auto md:mx-0"
                   onClick={() =>
                     window.open(
-                      "https://wa.me/5548991501393?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20serviço%20de%20limpeza%20e%20hidratação%20de%20couro.",
+                      "https://wa.me/5548991501393?text=Olá!%20Vim%20do%20site,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Transforma%20Clean.",
                       "_blank",
                     )
                   }
@@ -353,7 +353,7 @@ export default function Home() {
                   className="bg-[#5fb5a0] hover:bg-[#4a9a87] text-white rounded-full h-10 px-6 w-full sm:w-1/2 md:w-auto mx-auto md:mx-0"
                   onClick={() =>
                     window.open(
-                      "https://wa.me/5548991501393?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20serviço%20de%20impermeabilização%20de%20estofados.",
+                      "https://wa.me/5548991501393?text=Olá!%20Vim%20do%20site,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Transforma%20Clean.",
                       "_blank",
                     )
                   }
