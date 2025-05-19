@@ -569,7 +569,7 @@ export default function Home() {
     className="bg-[#5fb5a0] hover:bg-[#4a9a87] text-white rounded-full h-16 px-6 md:px-10 text-base md:text-xl font-bold w-full md:w-auto md:min-w-[300px] max-w-full shadow-lg whitespace-normal leading-tight"
     onClick={() =>
       window.open(
-        "https://wa.me/5548991501393?text=Olá!%20Vi%20o%20vídeo%20de%20transformação%20e%20gostaria%20de%20agendar%20uma%20higienização%20profissional.",
+        "https://wa.me/5548991501393?text=Olá!%20Vim%20do%20site,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Transforma%20Clean.",
         "_blank",
       )
     }
@@ -684,7 +684,7 @@ export default function Home() {
                   className="bg-[#5fb5a0] hover:bg-[#4a9a87] text-white rounded-full h-12 w-full"
                   onClick={() =>
                     window.open(
-                      "https://wa.me/5548991501393?text=Olá!%20Gostaria%20de%20conhecer%20mais%20sobre%20a missão%20da%20Transforma%20Clean.",
+                      "https://wa.me/5548991501393?text=Olá!%20Vim%20do%20site,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Transforma%20Clean.",
                       "_blank",
                     )
                   }
@@ -829,7 +829,7 @@ export default function Home() {
               className="bg-white text-[#5fb5a0] hover:bg-white/90 rounded-full h-14 px-10 text-lg font-medium"
               onClick={() =>
                 window.open(
-                  "https://wa.me/5548991501393?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20os%20serviços%20da%20Transforma%20Clean.",
+                  "https://wa.me/5548991501393?text=Olá!%20Vim%20do%20site,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Transforma%20Clean.",
                   "_blank",
                 )
               }
@@ -868,7 +868,7 @@ export default function Home() {
           className="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full h-16 w-16 flex items-center justify-center shadow-lg"
           onClick={() =>
             window.open(
-              "https://wa.me/5548991501393?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Transforma%20Clean.",
+              "https://wa.me/5548991501393?text=Olá!%20Vim%20do%20site,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Transforma%20Clean.",
               "_blank",
             )
           }
